@@ -7,16 +7,16 @@ programa
 		
     
     		para (inteiro i = 0; i < 10; i++) {
-      	inteiro maxIndex = i
+      	inteiro indexMaximo = i
       	para (inteiro j = i + 1; j < 10; j++) {
-        	se (vetor[j] > vetor[maxIndex]) {
-          maxIndex = j
+        	se (vetor[j] > vetor[indexMaximo]) {
+          indexMaximo = j
         	}
       	}
       
       	inteiro temp = vetor[i]
-     	vetor[i] = vetor[maxIndex]
-      	vetor[maxIndex] = temp
+     	vetor[i] = vetor[indexMaximo]
+      	vetor[indexMaximo] = temp
     }
     
     escreva("Vetor após a ordenação em ordem decrescente:\n")
@@ -31,7 +31,7 @@ programa
  * Esta seção do arquivo guarda informações do Portugol Studio.
  * Você pode apagá-la se estiver utilizando outro editor.
  * 
- * @POSICAO-CURSOR = 300; 
+ * @POSICAO-CURSOR = 415; 
  * @PONTOS-DE-PARADA = ;
  * @SIMBOLOS-INSPECIONADOS = ;
  * @FILTRO-ARVORE-TIPOS-DE-DADO = inteiro, real, logico, cadeia, caracter, vazio;
