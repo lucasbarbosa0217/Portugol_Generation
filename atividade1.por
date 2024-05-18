@@ -3,23 +3,39 @@ programa
 	
 	funcao inicio()
 	{
-		inteiro listaNumeros[10]
-		para(inteiro i =0; i< 10; i++){
-		escreva("Insira o ", i+1, "º número")
-		leia(listaNumeros[i])
-		se(i != 0 e listaNumeros[i] < listaNumeros[i-1]){
-			listaNumeros[i] }
-			}
-		escreva("Olá Mundo")
+		inteiro vetor[10] = {2,5,1,3,4,9,7,8,10,6}
 		
-	}
+    
+    		para (inteiro i = 0; i < 10; i++) {
+      	inteiro maxIndex = i
+      	para (inteiro j = i + 1; j < 10; j++) {
+        	se (vetor[j] > vetor[maxIndex]) {
+          maxIndex = j
+        	}
+      	}
+      
+      	inteiro temp = vetor[i]
+     	vetor[i] = vetor[maxIndex]
+      	vetor[maxIndex] = temp
+    }
+    
+    escreva("Vetor após a ordenação em ordem decrescente:\n")
+    para (inteiro i = 0; i < 10; i++) {
+      escreva(vetor[i], " ")
+    }
+    escreva("\n")
+}
+
+		
+		
+	
 }
 /* $$$ Portugol Studio $$$ 
  * 
  * Esta seção do arquivo guarda informações do Portugol Studio.
  * Você pode apagá-la se estiver utilizando outro editor.
  * 
- * @POSICAO-CURSOR = 214; 
+ * @POSICAO-CURSOR = 331; 
  * @PONTOS-DE-PARADA = ;
  * @SIMBOLOS-INSPECIONADOS = ;
  * @FILTRO-ARVORE-TIPOS-DE-DADO = inteiro, real, logico, cadeia, caracter, vazio;
